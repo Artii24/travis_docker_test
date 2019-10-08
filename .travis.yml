@@ -1,3 +1,8 @@
 language: bash
+services:
+- docker
+before_instal:
+- docker build -t my_container .
+
 script:
- bash.script.sh
+ - docker run my_container
